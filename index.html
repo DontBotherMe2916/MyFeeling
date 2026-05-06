@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>My Feeling</title>
+  <meta charset="UTF-8">
+  <title>My Feeling</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
 <style>
 body{
     font-family:Arial, sans-serif;
@@ -19,7 +21,7 @@ body{
     padding:30px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
-    width:950px;
+    width:1500px;
 }
 
 h2{
@@ -51,16 +53,21 @@ h2{
     margin-right:8px;
 }
 
+#text{
+    white-space:pre-line;
+    line-height:1.6;
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h2>💙 Viết cho em 💕</h2>
+    <h2> For you 💕</h2>
+</div>
 
-    <div class="list">
-        <div class="item"><span></span>Anh cảm thấy kiểu mối quan hệ của mình chưa giống người yêu lắm ấy nên anh nghĩ có vài điều chúng ta cần sửa nha.
+<script>
+        const content = `Anh cảm thấy kiểu mối quan hệ của mình chưa giống người yêu lắm ấy nên anh nghĩ có vài điều chúng ta cần sửa nha.
             Đầu tiên là cách xưng hô cần thay đổi này. 
             Tiếp theo là anh thấy có nhiều mối quan hệ mà em có thể nhìn bằng lợi ích, nhìn một cách lý tính nhưng mà tình yêu thì anh nghĩ không nên thế.
             Vì yêu là cảm xúc, yêu bắt đầu từ những hảo cảm, những điều nhỏ bé góp nhặt thành.
@@ -117,15 +124,23 @@ h2{
             Anh sẽ đến bên em dù có là bao xa, chỉ cần em muốn là được.
             Anh chưa từng quan tâm, cưng chiều ai như vậy, có lẽ do em nhỏ hơn, hoặc anh yêu em, hoặc là cả hai điều đó.
             Nên đôi lúc anh có chút vụng về, không biết cách thể hiện cảm xúc thì mong em thông cảm.
-            Đơn giản là anh yêu em.
+            Đơn giản là anh yêu em. 💖
+            `;
             
             
-        </div>
-    </div>
-</div>
+ let i = 0;
+const speed = 20;
 
-</body>
-</html>
+function typeWriter(){
+    if(i < content.length){
+        document.getElementById("text").innerHTML += content.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
+</script>
 
 </body>
 </html>
