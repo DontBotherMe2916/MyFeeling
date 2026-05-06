@@ -40,11 +40,12 @@ h2{
 <body>
 
 <div class="container">
-    <h2> For you 💕</h2>
+    <h2>For you 💕</h2>
+    <p id="text"></p>
 </div>
 
 <script>
-        const content = `Anh cảm thấy kiểu mối quan hệ của mình chưa giống người yêu lắm ấy nên anh nghĩ có vài điều chúng ta cần sửa nha.
+const content = `Anh cảm thấy kiểu mối quan hệ của mình chưa giống người yêu lắm ấy nên anh nghĩ có vài điều chúng ta cần sửa nha.
             Đầu tiên là cách xưng hô cần thay đổi này. 
             Tiếp theo là anh thấy có nhiều mối quan hệ mà em có thể nhìn bằng lợi ích, nhìn một cách lý tính nhưng mà tình yêu thì anh nghĩ không nên thế.
             Vì yêu là cảm xúc, yêu bắt đầu từ những hảo cảm, những điều nhỏ bé góp nhặt thành.
@@ -102,11 +103,10 @@ h2{
             Anh chưa từng quan tâm, cưng chiều ai như vậy, có lẽ do em nhỏ hơn, hoặc anh yêu em, hoặc là cả hai điều đó.
             Nên đôi lúc anh có chút vụng về, không biết cách thể hiện cảm xúc thì mong em thông cảm.
             Đơn giản là anh yêu em. 💖
-            `;
-            
-            
- let i = 0;
-const speed = 20;
+`;
+
+let i = 0;
+const speed = 25;
 
 function typeWriter(){
     if(i < content.length){
