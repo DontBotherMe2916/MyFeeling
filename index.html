@@ -1,113 +1,71 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Tâm Thư 💌</title>
+<meta charset="UTF-8">
+<title>My Feeling</title>
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#a1c4fd,#fbc2eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffffff, #dbeafe, #ffe4ec);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+.container{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    width:420px;
+}
 
-    .container {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 16px;
-      width: 420px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      border: 2px solid #dbeafe;
-    }
+h2{
+    text-align:center;
+    color:#ff6fa5;
+    margin-bottom:20px;
+}
 
-    h2 {
-      text-align: center;
-      color: #3b82f6; /* xanh dương */
-      margin-bottom: 15px;
-    }
+.list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
 
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid #93c5fd;
-      resize: none;
-      font-size: 14px;
-      outline: none;
-      transition: 0.3s;
-    }
+.item{
+    background:linear-gradient(135deg,#e0f0ff,#ffe0f0);
+    padding:12px 15px;
+    border-radius:12px;
+    transition:0.3s;
+    cursor:pointer;
+}
 
-    textarea:focus {
-      border-color: #ec4899; /* hồng */
-      box-shadow: 0 0 8px rgba(236, 72, 153, 0.3);
-    }
+.item:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 12px;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(90deg, #3b82f6, #ec4899);
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.item span{
+    margin-right:8px;
+}
 
-    button:hover {
-      opacity: 0.85;
-    }
-
-    .output {
-      margin-top: 15px;
-      padding: 12px;
-      background: #f1f5f9;
-      border-radius: 12px;
-      min-height: 60px;
-      white-space: pre-wrap;
-      border-left: 4px solid #ec4899;
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
 <div class="container">
-  <h2>💌 Tâm Thư Của Bạn</h2>
+    <h2>💙 Viết cho em 💕</h2>
 
-  <textarea id="letter" placeholder="Viết điều bạn muốn nói..."></textarea>
-
-  <button onclick="saveLetter()">Lưu lại 💾</button>
-
-  <div class="output" id="output"></div>
+    <div class="list">
+        <div class="item"><span></span>Anh cảm thấy kiểu mối quan hệ của mình chưa giống người yêu lắm ấy nên anh nghĩ có vài điều chúng ta cần sửa nha. Đầu tiên là cách xưng hô cần thay đổi này. Thứ 2 là aanh thấy có nhiều mối quan hệ có thể nhìn bằng lợi ích một cách lý tính nhưng mà tình yêu thì anh nghĩ không nên ấy vì yêu là cảm xúc, là từ những hảo cảm, những điều nhỏ góp nhặt thành. Như anh yêu em vì những hảo cảm được tạo ra khi chúng ta gặp nhau, những điều chúng ta trải qua cùng nhau, những gì anh cảm nhận từ em, cũng như cách em để tâm và biết anh thích gì, anh rất trân trọng những điều đó. Và hơn hết anh yêu con người em, yêu cả những ưu và khuyết điểm. Em có những mặt tốt cũng như một số tính xấu, những điều chưa hoàn hảo. Nhưng tất cả điều đó tạo nên một em rất hoàn hảo và hơn nữa em còn nỗ lực để bản thân trở nên tốt hơn từng ngày. Nên là anh mong em biết rằng yêu có thể lý tính nhưng đừng quá lý tính vì yêu còn là cảm xúc, là những điều em không giải thích, không thể hiểu được, yêu đơn giản là yêu thôi. Thú thật thì anh cũng từng yêu bằng lý trí, bằng những thứ người khác có thể đem lại cho anh. Và đến thời điểm người khác không đem được gì cho anh nữa thì anh rời đi một cách rất dứt khoát và nhẫn tâm. đôi lúc a nhìn lại a thấy bản thân ở thời điểm đó rất tệ. Tình yêu phải nên là lúc họ không có lợi ích gì cho mình nữa nhưng vẫn kihhhhhhh ch  Nên là a mong e thử một lần cảm nhận mọi thứ, cảm nhận mối quan hệ này bằng cảm xúc của bản thân.</div>
+    </div>
 </div>
 
-<script>
-  function saveLetter() {
-    let content = document.getElementById("letter").value;
-
-    if(content.trim() === "") {
-      alert("Viết gì đó đi chứ 🥺");
-      return;
-    }
-
-    localStorage.setItem("tamthu", content);
-    document.getElementById("output").innerText = content;
-  }
-
-  window.onload = function() {
-    let saved = localStorage.getItem("tamthu");
-    if(saved) {
-      document.getElementById("output").innerText = saved;
-    }
-  }
-</script>
+</body>
+</html>
 
 </body>
 </html>
