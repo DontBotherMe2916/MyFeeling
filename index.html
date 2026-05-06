@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>My Feeling 💖</title>
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+<style>
 <style>
 body{
     font-family:Arial, sans-serif;
@@ -16,23 +17,37 @@ body{
 }
 
 .container{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    background:linear-gradient(135deg,#ffffff,#ffe6f0);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
     width:900px;
     max-height:90vh;
     overflow:auto;
+    border:2px solid rgba(255,255,255,0.5);
 }
+
+.container::-webkit-scrollbar{
+    width:8px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background:#ff9ecb;
+    border-radius:10px;
+}    
 
 h2{
     text-align:center;
     color:#ff6fa5;
+    font-size:28px;
 }
 
 #text{
     white-space:pre-line;
-    line-height:1.6;
+    line-height:1.8;
+    font-size:20px;
+    color:#444;
+    font-weight:500;
 }
 </style>
 </head>
@@ -98,7 +113,8 @@ const content = `Anh cảm thấy kiểu mối quan hệ của mình chưa giố
             Nhưng nếu có thể thì anh muốn chuyện đó xảy ra khi ta không coi nhau là một phép thử, hoặc là khi anh 25 tuổi - khi mà em cho là anh đã trưởng thành.
             Vì đơn giản nếu có thể, anh muốn đồng hành cùng em cả cuộc đời này chứ không phải một khoảnh khắc hay một đoạn đường.
 
-            Có lẽ bây giờ em chỉ có đôi chút thích anh, nhưng đến một thời điểm nào đó, em cảm thấy em nhớ anh thì em hãy nói với anh điều đó.
+            Có lẽ bây giờ em chỉ có đôi chút thích anh, nhưng anh tin là anh có thể làm cho em yêu anh.
+            Và đến một thời điểm nào đó, em cảm thấy em nhớ anh thì em hãy nói với anh điều đó.
             Anh sẽ đến bên em dù có là bao xa, chỉ cần em muốn là được.
             Anh chưa từng quan tâm, cưng chiều ai như vậy, có lẽ do em nhỏ hơn, hoặc anh yêu em, hoặc là cả hai điều đó.
             Nên đôi lúc anh có chút vụng về, không biết cách thể hiện cảm xúc thì mong em thông cảm.
@@ -106,7 +122,7 @@ const content = `Anh cảm thấy kiểu mối quan hệ của mình chưa giố
 `;
 
 let i = 0;
-const speed = 25;
+const speed = 80;
 
 function typeWriter(){
     if(i < content.length){
